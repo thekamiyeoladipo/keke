@@ -19,7 +19,7 @@
 }
 
 body {
-    font-family: 'south afirkas 2100', Arial, sans-serif;
+    font-family: 'south afirkas 2100';
 }
 
 /* Navigation */
@@ -45,6 +45,23 @@ body {
     font-size: 24px;
     color: #fff;
     text-decoration: none;
+}
+
+.logo img {
+    width: 150px; /* Default size */
+    transition: width 0.3s ease-in-out; /* Smooth transition for resizing */
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        width: 120px; /* Smaller logo size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 100px; /* Even smaller logo for very small screens */
+    }
 }
 
 .desktop-menu {
@@ -88,13 +105,20 @@ body {
     cursor: pointer;
     gap: 5px;
 }
+.hamburger img {
+    transition: transform 0.3s ease-in-out;
+}
 
-.hamburger span {
+.hamburger.active img {
+    transform: rotate(90deg); /* Example transformation when active */
+}
+
+/* .hamburger span {
     width: 25px;
     height: 3px;
     background-color: #fff;
     transition: transform 0.3s ease, background-color 0.3s ease;
-}
+} */
 
 /* Mobile Menu */
 .mobile-menu {
@@ -106,10 +130,20 @@ body {
     right: 0;
     width: 100%;
     height: 60vh;
-    background-color: #fff; /* White background for the mobile menu */
+    background-color: #fff;
     padding: 100px 20px;
-    transition: all 0.5s ease-in-out; /* Smooth transition for the menu */
-    z-index: 999; /* Ensure it appears on top */
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateY(-20px); /* Start with a slight upward position */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition for open/close */
+    z-index: 999;
+    pointer-events: none;
+}
+
+.mobile-menu.active {
+    display: flex;
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide down */
+    pointer-events: all;
 }
 
 .mobile-menu .nav-links {
@@ -117,24 +151,29 @@ body {
     display: flex;
     flex-direction: column;
     text-align: left;
-    gap: 20px; /* Add space between links */
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: flex-start; /* Align links to the left */
+    width: 100%; /* Ensure full width for alignment */
 }
 
 .mobile-menu .nav-links li a {
-    color: #333; /* Dark text for mobile */
+    color: #333;
     font-size: 20px;
-    font-family: 'Arial', sans-serif;
+    font-family: 'south afirkas 2100';
     font-weight: 700;
     text-decoration: none;
     text-align: left;
+    width: 100%; /* Ensure the link takes full width */
 }
 
 .mobile-menu .nav-button {
-    margin-top: 20px; /* Add space between links and button */
+    margin-top: 20px;
     background-color: #CB8806;
     color: #fff;
     padding: 15px 30px;
     border-radius: 8px;
+    align-self: flex-start; /* Align button to the left */
 }
 
 /* Close Button */
@@ -147,6 +186,8 @@ body {
     cursor: pointer;
     z-index: 99;
 }
+
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
