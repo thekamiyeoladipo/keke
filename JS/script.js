@@ -1,10 +1,11 @@
- // Toggle the mobile menu visibility
- document.getElementById('toggleMenu').addEventListener('click', function() {
-    document.getElementById('mobileMenu').classList.add('active');
+// Hamburger menu toggle
+document.getElementById('hamburger').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.getElementById('mobile-menu').classList.toggle('active');
 });
 
-// Close the mobile menu
-document.getElementById('closeMenu').addEventListener('click', function() {
-    document.getElementById('mobileMenu').classList.remove('active');
+// Close button functionality
+document.getElementById('close-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.remove('active');
+    document.getElementById('hamburger').classList.remove('active');
 });
-
