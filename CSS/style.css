@@ -1,0 +1,149 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style-type: none;
+    outline: none;
+}
+
+
+@font-face {
+    font-family: 'south afirkas 2100';
+    src: url('/fonts/south\ afirkas\ 2100.ttf') format('woff2'),
+         url('/fonts/south\ afirkas\ 2100.ttf') format('woff'),
+         url('/fonts/south\ afirkas\ 2100.ttf') format('truetype'); /* Fallback for older browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'south afirkas 2100', Arial, sans-serif;
+}
+
+
+
+
+.navbar {
+    padding-top: 2rem;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Optionally remove the border altogether */
+.navbar-toggler {
+    border: none;
+}
+
+/* Adjust any background or color if needed */
+.navbar-toggler {
+    background-color: transparent; /* Or any color you prefer */
+}
+
+.navbar-nav .nav-item a {
+    color: #ffffff;
+}
+.navbar-nav .nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .hero-button {
+    margin-left: 15px; /* Optional: Adds space between the links and the button */
+    padding: 16px; /* Adjust padding to align vertically */
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* hero section   */
+
+
+.hero-container {
+    background-image: url('/IMAGE/Frame\ 17.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.hero-section {
+   
+    flex: 1;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+.hero-section h1, p {
+    color: #ffffff;
+}
+
+.hero-text {
+    text-align: left;
+    z-index: 2; 
+}
+
+.hero-image {
+    margin-top: 3rem;
+    position: absolute;
+    bottom: 0px;
+    right: -50px;
+    max-width: 100%; /* Control the size of the image */
+    height: auto;
+    z-index: 1; /* Ensure the image is behind the text */
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        max-width: 70%; /* Adjust size for smaller screens */
+    }
+}
+.hero-button {
+    background-color: #CB8806;
+    color: #ffffff !important;
+    border-radius: 8px;
+    padding: 16px;
+    text-transform: uppercase;
+}
+
+.hero-span {
+    font-family: 'Arial';
+    font-family: 400;
+    font-size: 24px;
+    line-height: 27.6px;
+}
+
+.hero-button:hover {
+    background-color: #CB8806;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #CB8806;
+}
