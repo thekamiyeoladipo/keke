@@ -8,5 +8,3 @@ document.getElementById('closeMenu').addEventListener('click', function() {
     document.getElementById('mobileMenu').classList.remove('active');
 });
 
-// this is a comment i want to use to push the first set of  changes to github
-console.log("Publish to github");
