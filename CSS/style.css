@@ -24,6 +24,7 @@ body {
 
 /* Navigation */
 .navbar {
+    padding: 24px 0;
     width: 100%;
     background-color: #333;
     padding: 15px 0;
@@ -53,6 +54,9 @@ body {
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        padding-top: 37px;
+    }
     .logo img {
         width: 120px; /* Smaller logo size for mobile */
     }
