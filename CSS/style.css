@@ -307,7 +307,7 @@ body {
     .hero-image {
         width: 50%;
         position: absolute;
-        top: 200px !important;
+        top: 220px !important;
         right: 0;
     }
 }
@@ -361,7 +361,7 @@ body {
     }
 
     .col-left {
-        padding-left: 1.5rem;
+        padding-left: 1rem;
     }
 
     .col-left h1 {
