@@ -31,6 +31,7 @@ body {
     position: fixed;
     top: 0;
     z-index: 1000;
+    height: 60px; /* Adjust according to the actual height of your navbar */
 }
 
 .container {
@@ -239,5 +240,98 @@ body {
 @media (min-width: 769px) {
     .mobile-menu {
         display: none; /* Hide mobile menu on larger screens */
+    }
+}
+
+
+.shared-bg {
+    background-image: url('/IMAGE/Frame\ 17.png'); /* If using an image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Hero section */
+.hero {
+    padding: 120px 0 60px; /* Adjust the top padding to be equal to the navbar's height + extra space */
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.col-left {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.col-left h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.col-left p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.hero-button {
+    padding: 15px 30px;
+    background-color: #CB8806;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #ff9f1a;
+    transform: scale(1.05);
+}
+
+.col-right {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: adds a bit of rounded corners to the image */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .col-left, .col-right {
+        padding: 20px 0;
+    }
+
+    .col-left {
+        padding-right: 0;
+    }
+
+    .col-left h1 {
+        font-size: 36px;
+    }
+
+    .col-left p {
+        font-size: 16px;
     }
 }
