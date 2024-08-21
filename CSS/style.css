@@ -20,6 +20,7 @@
 
 body {
     font-family: 'south afirkas 2100';
+    background-color: #fff;
 }
 
 /* Navigation */
@@ -134,7 +135,7 @@ body {
     top: 0;
     right: 0;
     width: 100%;
-    height: 60vh;
+    height: 346px;
     background-color: #fff;
     padding: 100px 10px;
     opacity: 0; /* Start with opacity 0 */
@@ -255,6 +256,8 @@ body {
 /* Hero section */
 .hero {
     padding: 120px 0 60px; /* Adjust the top padding to be equal to the navbar's height + extra space */
+    height: 90vh;
+    position: relative;
 }
 .container {
     max-width: 1200px;
@@ -271,6 +274,30 @@ body {
 .col-left {
     flex: 1;
     padding-right: 20px;
+    text-align: left;
+    margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+   
+    .col-left {
+        margin-top: 0;
+        max-width: 350px;
+    }
+    .col-left h1 {
+        font-size: 24px !important;
+    }
+
+    .col-left p {
+        font-size: 12px !important;
+    }
+
+    .col-left a {
+        
+    }
+    .hero-image {
+        width: 50%;
+    }
 }
 
 .col-left h1 {
@@ -306,13 +333,19 @@ body {
 }
 
 .hero-image {
-    max-width: 100%;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    max-width: 90%;
     height: auto;
     border-radius: 10px; /* Optional: adds a bit of rounded corners to the image */
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    .hero {
+        height: 349px;
+    }
     .row {
         flex-direction: column;
         text-align: center;
