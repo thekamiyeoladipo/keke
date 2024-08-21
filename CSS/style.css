@@ -287,7 +287,7 @@ body {
     border-radius: 10px; /* Optional: adds a bit of rounded corners to the image */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
    
     .col-left {
         margin-top: 0;
@@ -307,8 +307,8 @@ body {
     .hero-image {
         width: 50%;
         position: absolute;
-        top: 150px !important;
-        right: 0 !important;
+        top: 175px !important;
+        right: 0;
     }
 }
 
