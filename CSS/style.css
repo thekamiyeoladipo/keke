@@ -377,35 +377,43 @@ body {
 
 /* why choose keke section */
 .image-section {
-    padding: 50px 80px;
+    padding: 50px 15px;
 }
 .image-section h2 {
+    margin-left: 80px;
     font-size: 2rem;
     margin-bottom: 30px;
     text-align: left; /* Align heading to the left */
 }
 .image-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center images on smaller screens */
+    display: grid;
+    grid-template-columns: 1fr; /* Default to a single column */
     gap: 15px; /* Add some spacing between images */
+    justify-items: center; /* Center images on smaller screens */
+    padding: 0 15px; /* Default padding for smaller screens */
 }
 .image-container img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    max-width: 100%; /* Ensure the images fill the container width */
     transition: transform 0.2s ease-in-out;
 }
-/* .image-container img:hover {
-    transform: scale(1.05);
-} */
+
 /* Responsive Styles */
 @media(min-width: 768px) {
-    .image-container img {
-        flex: 1 0 30%; /* Each image takes up roughly 30% of the container on larger screens */
+   
+    .image-container {
+        grid-template-columns: repeat(3, 1fr); /* Three columns for desktop screens */
+        padding: 0 80px; /* Add 80px padding on both sides for desktop screens */
+        justify-items: stretch; /* Make sure images stretch to fill the columns */
     }
 }
 @media(max-width: 767px) {
+    .image-section h2 {
+        text-align: left;
+        margin-left: 20px;
+    }
     .image-container img {
-        flex: 1 0 80%; /* Each image takes up 80% of the container width on smaller screens */
+        width: 120%; /* Increase image width to 95% on smaller screens */
     }
 }
