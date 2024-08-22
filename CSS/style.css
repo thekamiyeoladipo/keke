@@ -32,7 +32,7 @@ body {
     position: fixed;
     top: 0;
     z-index: 1000;
-    height: 60px; /* Adjust according to the actual height of your navbar */
+    height: 80px; /* Adjust according to the actual height of your navbar */
 }
 
 .container {
@@ -371,5 +371,41 @@ body {
 
     .col-left p {
         font-size: 16px;
+    }
+}
+
+
+/* why choose keke section */
+.image-section {
+    padding: 50px 80px;
+}
+.image-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: left; /* Align heading to the left */
+}
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center images on smaller screens */
+    gap: 15px; /* Add some spacing between images */
+}
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+/* .image-container img:hover {
+    transform: scale(1.05);
+} */
+/* Responsive Styles */
+@media(min-width: 768px) {
+    .image-container img {
+        flex: 1 0 30%; /* Each image takes up roughly 30% of the container on larger screens */
+    }
+}
+@media(max-width: 767px) {
+    .image-container img {
+        flex: 1 0 80%; /* Each image takes up 80% of the container width on smaller screens */
     }
 }
